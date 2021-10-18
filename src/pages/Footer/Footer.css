@@ -1,0 +1,21 @@
+.footer {
+  background-color: #1d2636;
+  color: rgb(241, 241, 241);
+  padding: 50px 0;
+  margin-bottom: 20px;
+}
+.footer-logo {
+  font-size: 27px;
+  color: #03b97c;
+}
+.footer-para {
+  color: rgba(255, 255, 255, 0.603);
+}
+.footer-nav-item {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.603);
+  text-decoration: none;
+}
+.footer-nav-item:hover {
+  color: #03b97c;
+}
