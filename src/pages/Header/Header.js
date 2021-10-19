@@ -62,9 +62,12 @@ const Header = () => {
               </NavLink>
 
               {user.email ? (
-                <button onClick={logOut} className="btn btn-sm btn-success">
-                  LogOut
-                </button>
+                <Nav>
+                  <button onClick={logOut} className="btn btn-sm btn-success">
+                    LogOut
+                  </button>
+                  <span className="text-light ms-2">{user.displayName}</span>
+                </Nav>
               ) : (
                 <NavLink to="/login" className="btn btn-sm btn-success">
                   Login

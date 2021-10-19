@@ -18,6 +18,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+        <Header></Header>
         <Switch>
           <Route exact path="/">
             <Home></Home>
@@ -26,19 +27,13 @@ function App() {
             <Home></Home>
           </Route>
           <Route path="/about">
-            <Header></Header>
             <About></About>
-            <Footer></Footer>
           </Route>
           <Route path="/searvices">
-            <Header></Header>
             <Searvices></Searvices>
-            <Footer></Footer>
           </Route>
           <Route path="/details/:searviceId">
-            <Header></Header>
             <Details></Details>
-            <Footer></Footer>
           </Route>
 
           <PrivateRoute path="/appoinment">
@@ -57,6 +52,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </AuthProvider>
   );

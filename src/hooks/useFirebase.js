@@ -6,12 +6,15 @@ import {
   onAuthStateChanged,
   signOut,
   signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import initializeAuthentication from "../firebase/firebase.init";
 
 initializeAuthentication();
 
 const useFirebase = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState({});
@@ -48,7 +51,10 @@ const useFirebase = () => {
     });
   }, []);
 
-  //   handle email and password
+  //   handle email and password, name
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -58,6 +64,35 @@ const useFirebase = () => {
     setPassword(e.target.value);
   };
 
+  const setUserName = () => {
+    updateProfile(auth.currentUser, {
+      displayName: name,
+    })
+      .then(() => {
+        // Profile updated!
+        // ...
+      })
+      .catch((error) => {
+        // An error occurred
+        // ...
+      });
+  };
+
+  const createUserWithEmailAndPass = (e) => {
+    console.log(email, password);
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        setUserName();
+        const user = userCredential.user;
+        setUser(user);
+
+        // ...
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
   // sign in with email and password
   const signInUsingEmail = () => {
     signInWithEmailAndPassword(auth, email, password)
@@ -76,9 +111,11 @@ const useFirebase = () => {
     user,
     error,
     logOut,
+    handleName,
     handleEmail,
     handlePassword,
     signInUsingEmail,
+    createUserWithEmailAndPass,
   };
 };
 
