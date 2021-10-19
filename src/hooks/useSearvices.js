@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 const useSearvices = () => {
-  const [searvices, setSearvices] = useState();
+  const [searvices, setSearvices] = useState([]);
   useEffect(() => {
-    fetch(`/searvices.json`)
+    fetch("/searvices.json")
       .then((res) => res.json())
       .then((data) => setSearvices(data));
   }, []);

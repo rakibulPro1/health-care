@@ -1,9 +1,12 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+
 import "./Header.css";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
   return (
     <div>
       <Navbar
@@ -42,6 +45,13 @@ const Header = () => {
               >
                 Services
               </NavLink>
+              <NavLink
+                to="/appoinment"
+                className="link-item"
+                activeClassName="selected"
+              >
+                Appoinment
+              </NavLink>
 
               <NavLink
                 to="/contact"
@@ -50,9 +60,16 @@ const Header = () => {
               >
                 Contact
               </NavLink>
-              <NavLink to="/login" className="d-flex align-self-center ms-4">
-                <button className="btn btn-sm btn-success">Login</button>
-              </NavLink>
+
+              {user.email ? (
+                <button onClick={logOut} className="btn btn-sm btn-success">
+                  LogOut
+                </button>
+              ) : (
+                <NavLink to="/login" className="btn btn-sm btn-success">
+                  Login
+                </NavLink>
+              )}
               <NavLink to="/signup" className="d-flex align-self-center ms-4">
                 <button className="btn btn-sm btn-success">SignUp</button>
               </NavLink>

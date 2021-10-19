@@ -6,7 +6,7 @@ const Searvices = () => {
   const [searvices, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("./Searvices.json")
+    fetch("./searvices.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

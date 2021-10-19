@@ -1,4 +1,3 @@
-import Button from "@restart/ui/esm/Button";
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -18,12 +17,12 @@ const Searvice = (props) => {
             <Card.Text>{description.slice(0, 220)}</Card.Text>
 
             <Link to={`/details/${id}`}>
-              <Button
+              <button
                 className="btn btn-sm"
                 style={{ backgroundColor: "#00e5cc", color: "white" }}
               >
                 Know More
-              </Button>
+              </button>
             </Link>
           </Card.Body>
         </Card>

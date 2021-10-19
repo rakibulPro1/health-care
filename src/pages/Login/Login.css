@@ -22,3 +22,14 @@
   font-weight: bold;
   font-size: 19px;
 }
+.google-btn {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #afb4b4;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 20px;
+  color: black;
+
+  font-size: 17px;
+}
