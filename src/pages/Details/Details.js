@@ -1,18 +1,16 @@
-import React, { useEffect } from "react";
 import { useParams } from "react-router";
+import useSearvices from "../../hooks/useSearvices";
 
 const Details = () => {
+  const [searvices] = useSearvices([]);
   const { searviceId } = useParams();
-
-  useEffect(() => {
-    fetch(`./searvices.json/${searviceId}`)
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, [searviceId]);
+  const selectedSearvice = searvices.find(
+    (searvice) => searvice.id === parseInt(searviceId)
+  );
 
   return (
     <div>
-      <h2>This is details:{searviceId} </h2>
+      <h3>{selectedSearvice?.name}</h3>
     </div>
   );
 };

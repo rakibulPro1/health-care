@@ -21,7 +21,7 @@ const Searvices = () => {
       </div>
       <Row xs={1} md={3} className="g-4 px-4">
         {searvices.map((searvice) => (
-          <Searvice searvice={searvice}></Searvice>
+          <Searvice key={searvice.id} searvice={searvice}></Searvice>
         ))}
       </Row>
     </div>

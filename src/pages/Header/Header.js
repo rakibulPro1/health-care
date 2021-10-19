@@ -50,9 +50,12 @@ const Header = () => {
               >
                 Contact
               </NavLink>
-              <div className="d-flex align-self-center ms-4">
-                <button className="btn btn-sm btn-primary">Login</button>
-              </div>
+              <NavLink to="/login" className="d-flex align-self-center ms-4">
+                <button className="btn btn-sm btn-success">Login</button>
+              </NavLink>
+              <NavLink to="/signup" className="d-flex align-self-center ms-4">
+                <button className="btn btn-sm btn-success">SignUp</button>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
