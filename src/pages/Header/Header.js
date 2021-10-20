@@ -69,13 +69,13 @@ const Header = () => {
                   <span className="text-light ms-2">{user.displayName}</span>
                 </Nav>
               ) : (
-                <NavLink to="/login" className="btn btn-sm btn-success mb-md-2">
+                <NavLink to="/login" className="btn btn-sm btn-success mb-2">
                   Login
                 </NavLink>
               )}
               <NavLink
                 to="/signup"
-                className="btn btn-sm btn-success ms-lg-2 ms-md-2"
+                className="btn btn-sm btn-success ms-lg-2 ms-md-2 mb-2"
               >
                 Sign Up
               </NavLink>
