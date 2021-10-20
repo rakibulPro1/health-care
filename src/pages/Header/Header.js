@@ -73,8 +73,8 @@ const Header = () => {
                   Login
                 </NavLink>
               )}
-              <NavLink to="/signup" className="d-flex align-self-center ms-4">
-                <button className="btn btn-sm btn-success">SignUp</button>
+              <NavLink to="/signup" className="btn btn-sm btn-success ms-2">
+                Sign Up
               </NavLink>
             </Nav>
           </Navbar.Collapse>
