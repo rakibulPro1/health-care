@@ -32,9 +32,9 @@ function App() {
           <Route path="/searvices">
             <Searvices></Searvices>
           </Route>
-          <Route path="/details/:searviceId">
+          <PrivateRoute path="/details/:searviceId">
             <Details></Details>
-          </Route>
+          </PrivateRoute>
 
           <PrivateRoute path="/appoinment">
             <Appoinment></Appoinment>
