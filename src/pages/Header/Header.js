@@ -73,6 +73,12 @@ const Header = () => {
                   Login
                 </NavLink>
               )}
+              <NavLink
+                to="/signup"
+                className="btn btn-sm btn-success ms-lg-2 ms-md-2"
+              >
+                Sign Up
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
