@@ -46,7 +46,7 @@ const Signup = () => {
               </div>
               <div className="d-flex justify-content-between ">
                 <Link style={{ textDecoration: "none" }} to="/login">
-                  <small>Create an account</small>
+                  <small>Already have an account</small>
                 </Link>
                 <Link style={{ textDecoration: "none" }} to="/home">
                   <small>Go to back</small>
