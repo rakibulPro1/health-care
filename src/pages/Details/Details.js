@@ -16,7 +16,7 @@ const Details = () => {
         <Col>
           <div className="my-5">
             <h2>{selectedSearvice?.name}</h2>
-            <p>{selectedSearvice.description}</p>
+            <p>{selectedSearvice?.description}</p>
             <Link to="/home">
               <button className="btn btn-sm btn-info text-light px-4 py-2 mt-4">
                 Book an Appoinment
@@ -26,7 +26,7 @@ const Details = () => {
         </Col>
         <Col>
           <div className="my-5">
-            <Image src={selectedSearvice.img} fluid />
+            <Image src={selectedSearvice?.img} fluid />
           </div>
         </Col>
       </Row>
